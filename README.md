@@ -4,6 +4,14 @@ This is the middleware HTTP server to communicate between the IOT device and Con
 
 * Install
 
+```go get bitbucket.org/nihanthd/optimus/...```
+
+* Development
+
+    1. Clone ```git clone https://bitbucket.org/nihanthd/optimus.git```
+    2. To get the dependencies ```dep ensure```
+    3. To build ```cd cmd/optimus && go build```
+    4. To run ```./optimus -c ../../config.yaml```
 ```go get github.com/nihanthd/optimus/...```
 
 * Development

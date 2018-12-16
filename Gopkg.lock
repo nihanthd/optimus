@@ -6,6 +6,8 @@
   name = "github.com/DataDog/datadog-go"
   packages = ["statsd"]
   pruneopts = ""
+  name = "github.com/DataDog/datadog-go"
+  packages = ["statsd"]
   revision = "e67964b4021ad3a334e748e8811eb3cd6becbc6e"
   version = "2.1.0"
 
@@ -30,6 +32,13 @@
   name = "github.com/dgrijalva/jwt-go"
   packages = ["."]
   pruneopts = ""
+  name = "github.com/beorn7/perks"
+  packages = ["quantile"]
+  revision = "3a771d992973f24aa725d07868b467d1ddfceafb"
+
+[[projects]]
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
   revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
   version = "v3.2.0"
 
@@ -65,6 +74,8 @@
     "middleware",
   ]
   pruneopts = ""
+  name = "github.com/labstack/echo"
+  packages = [".","middleware"]
   revision = "1abaa3049251d17932e4313c2d6165073fd07fd8"
   version = "v3.3.6"
 
@@ -78,6 +89,8 @@
     "random",
   ]
   pruneopts = ""
+  name = "github.com/labstack/gommon"
+  packages = ["bytes","color","log","random"]
   revision = "2a618302b929cc20862dda3aa6f02f64dbe740dd"
   version = "v0.2.7"
 
@@ -118,6 +131,8 @@
   name = "github.com/pkg/errors"
   packages = ["."]
   pruneopts = ""
+  name = "github.com/pkg/errors"
+  packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
@@ -139,6 +154,9 @@
     "prometheus/promhttp",
   ]
   pruneopts = ""
+  branch = "master"
+  name = "github.com/prometheus/client_golang"
+  packages = ["prometheus","prometheus/internal"]
   revision = "f69c853d21c15596929fa9126ba211247e7dca95"
 
 [[projects]]
@@ -147,6 +165,8 @@
   name = "github.com/prometheus/client_model"
   packages = ["go"]
   pruneopts = ""
+  name = "github.com/prometheus/client_model"
+  packages = ["go"]
   revision = "5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f"
 
 [[projects]]
@@ -159,6 +179,8 @@
     "model",
   ]
   pruneopts = ""
+  name = "github.com/prometheus/common"
+  packages = ["expfmt","internal/bitbucket.org/ww/goautoneg","model"]
   revision = "c7de2306084e37d54b8be01f3541a8464345e9a5"
 
 [[projects]]
@@ -179,6 +201,13 @@
   name = "github.com/spf13/cobra"
   packages = ["."]
   pruneopts = ""
+  name = "github.com/prometheus/procfs"
+  packages = [".","internal/util","nfs","xfs"]
+  revision = "418d78d0b9a7b7de3a6bbc8a23def624cc977bb2"
+
+[[projects]]
+  name = "github.com/spf13/cobra"
+  packages = ["."]
   revision = "ef82de70bb3f60c65fb8eebacbb2d122ef517385"
   version = "v0.0.3"
 
@@ -195,6 +224,8 @@
   name = "github.com/stianeikeland/go-rpio"
   packages = ["."]
   pruneopts = ""
+  name = "github.com/stianeikeland/go-rpio"
+  packages = ["."]
   revision = "3abdd2207d33843c1c3fbea540bdf07990075c03"
   version = "4.1.0"
 
@@ -227,6 +258,13 @@
   name = "go.uber.org/atomic"
   packages = ["."]
   pruneopts = ""
+  name = "github.com/valyala/fasttemplate"
+  packages = ["."]
+  revision = "dcecefd839c4193db0d35b88ec65b4c12d360ab0"
+
+[[projects]]
+  name = "go.uber.org/atomic"
+  packages = ["."]
   revision = "1ea20fb1cbb1cc08cbd0d913a96dead89aa18289"
   version = "v1.3.2"
 
@@ -239,6 +277,8 @@
     "internal/dot",
   ]
   pruneopts = ""
+  name = "go.uber.org/dig"
+  packages = [".","internal/digreflect","internal/dot"]
   revision = "27eb30e15ef3e7f67cd86f2b65c618e3e308c104"
   version = "v1.5.0"
 
@@ -252,6 +292,8 @@
     "internal/lifecycle",
   ]
   pruneopts = ""
+  name = "go.uber.org/fx"
+  packages = [".","internal/fxlog","internal/fxreflect","internal/lifecycle"]
   revision = "b156a883a62423b7d9ab651d1689c42c4d788787"
   version = "v1.7.0"
 
@@ -264,6 +306,8 @@
   version = "v1.1.0"
 
 [[projects]]
+  name = "go.uber.org/zap"
+  packages = [".","buffer","internal/bufferpool","internal/color","internal/exit","zapcore"]
   digest = "1:246f378f80fba6fcf0f191c486b6613265abd2bc0f2fa55a36b928c67352021e"
   name = "go.uber.org/zap"
   packages = [
@@ -280,6 +324,8 @@
 
 [[projects]]
   branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["acme","acme/autocert"]
   digest = "1:61a86f0be8b466d6e3fbdabb155aaa4006137cb5e3fd3b949329d103fa0ceb0f"
   name = "golang.org/x/crypto"
   packages = [
@@ -305,34 +351,9 @@
   digest = "1:18ebd6e65d5223778b5fc92bbf2afffb54c6ac3889bbc362df692b965f932fae"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  pruneopts = ""
   revision = "b09afc3d579e346c4a7e4705953acaf6f9e551bd"
 
 [[projects]]
-  digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
-  name = "golang.org/x/text"
-  packages = [
-    "collate",
-    "collate/build",
-    "internal/colltab",
-    "internal/gen",
-    "internal/tag",
-    "internal/triegen",
-    "internal/ucd",
-    "language",
-    "secure/bidirule",
-    "transform",
-    "unicode/bidi",
-    "unicode/cldr",
-    "unicode/norm",
-    "unicode/rangetable",
-  ]
-  pruneopts = ""
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
-
-[[projects]]
-  digest = "1:8db2ca81210e4321ab17dc75f0179997bd6965b247f7c1c4eb23b403acedd445"
   name = "gopkg.in/bluesuncorp/validator.v5"
   packages = ["."]
   pruneopts = ""
@@ -340,6 +361,8 @@
   version = "v5.12"
 
 [[projects]]
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
   digest = "1:f0620375dd1f6251d9973b5f2596228cc8042e887cd7f827e4220bc1ce8c30e2"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
@@ -369,5 +392,6 @@
     "gopkg.in/bluesuncorp/validator.v5",
     "gopkg.in/yaml.v2",
   ]
+  inputs-digest = "d971d8a3667244ba1d86a53ef75be8f6141af27c518f9cdc57e43cf9335dab75"
   solver-name = "gps-cdcl"
   solver-version = 1
