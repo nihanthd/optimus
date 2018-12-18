@@ -1,0 +1,32 @@
+
+[[constraint]]
+  name = "github.com/spf13/cobra"
+  version = "0.0.3"
+
+[[constraint]]
+  name = "go.uber.org/zap"
+  version = "1.8.0"
+
+[[constraint]]
+  name = "gopkg.in/yaml.v2"
+  version = "v2.2.1"
+
+[[constraint]]
+  name = "github.com/pkg/errors"
+  version = "0.8.0"
+
+[[constraint]]
+  name = "github.com/stianeikeland/go-rpio"
+  version = "4.1.0"
+
+[[constraint]]
+  name = "go.uber.org/fx"
+  version = "v1.6.0"
+
+[[constraint]]
+  name = "github.com/prometheus/client_golang"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/go-resty/resty"
+  version = "v1.7.0"

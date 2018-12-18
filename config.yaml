@@ -1,0 +1,26 @@
+# Server configuration
+server:
+  http_port: 8082
+  https_port: 8443
+  websocket_port: 8080
+
+# Logging configuration
+log:
+  access: true
+  level: DEBUG
+  enabled: true
+
+env:
+  name: Optimus
+  service: Raspberry
+  environment: development
+
+http:
+  port: 8084
+
+statsd:
+  host: localhost
+  enabled: false
+
+pi:
+  enabled: false
