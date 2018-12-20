@@ -10,22 +10,21 @@ import (
 	"os"
 	"time"
 
-	"github.com/nihanthd/optimus/exporter"
-
+	"github.com/nihanthd/optimus/env"
+	"github.com/nihanthd/optimus/log"
 	"github.com/nihanthd/optimus/pi"
+	"github.com/nihanthd/optimus/pins"
+	"go.uber.org/fx"
+
+	"github.com/nihanthd/optimus/exporter"
 
 	"github.com/DataDog/datadog-go/statsd"
 	"github.com/go-resty/resty"
 
-	"go.uber.org/fx"
-
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/nihanthd/optimus/env"
-	"github.com/nihanthd/optimus/log"
 	statsd2 "github.com/nihanthd/optimus/metrics/statsd"
 	middleware2 "github.com/nihanthd/optimus/middleware"
-	"github.com/nihanthd/optimus/pins"
 	"github.com/nihanthd/optimus/pins/handler"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
@@ -51,6 +50,9 @@ func init() {
 	rootCmd.AddCommand(serverCmd)
 }
 
+/*
+Creates resty.Client with the given settings to use with prometheus.
+*/
 func NewClient() *resty.Client {
 	return resty.NewWithClient(&http.Client{
 		Timeout: time.Second * 30,
@@ -76,7 +78,7 @@ func NewRouter(
 	metricsHandler *exporter.MetricsHandler,
 ) (*echo.Echo, error) {
 	logger.Info("Creating new Echo Router")
-	// Echo router
+	// Setting up Echo router
 	e := echo.New()
 	e.Logger.SetOutput(ioutil.Discard)
 	e.HideBanner = true
@@ -111,6 +113,9 @@ func Start(server *http.Server, e *echo.Echo) {
 	// Noop
 }
 
+/*
+This is function that executes the application.
+*/
 func run() {
 	// Intialize random seed
 	rand.Seed(time.Now().UTC().UnixNano())

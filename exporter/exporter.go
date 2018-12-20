@@ -14,6 +14,9 @@ type Exporter struct {
 	client *resty.Client
 }
 
+/*
+Creates new Exporter required by fx to initialize the application
+*/
 func NewExporter(log *zap.Logger, statsd *statsd.Client, client *resty.Client) *Exporter {
 	return &Exporter{
 		log:    log,
@@ -22,6 +25,9 @@ func NewExporter(log *zap.Logger, statsd *statsd.Client, client *resty.Client) *
 	}
 }
 
+/*
+Creates the registry that would be used by prometheus to get the metrics.
+*/
 func (e *Exporter) GetRegistry(labels prometheus.Labels) *prometheus.Registry {
 	registry := prometheus.NewRegistry()
 	var collector prometheus.Collector

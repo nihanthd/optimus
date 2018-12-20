@@ -11,12 +11,18 @@ type MetricsHandler struct {
 	exporter *Exporter
 }
 
+/*
+Create new MetricsHandler required by fx to initialize the command
+*/
 func NewMetricsHandler(exporter *Exporter) *MetricsHandler {
 	return &MetricsHandler{
 		exporter: exporter,
 	}
 }
 
+/*
+Handler function to serve the metrics endpoint queried by prometheus.
+*/
 func (h *MetricsHandler) GetMetrics(c echo.Context) error {
 	labels := prometheus.Labels{}
 	registry := h.exporter.GetRegistry(labels)

@@ -24,6 +24,9 @@ type Logging struct {
 	Access bool   `yaml:"access"`
 }
 
+/*
+Reads the yaml file and loads into the Config struct
+*/
 func Parse(path string) (*Config, error) {
 	content, err := ioutil.ReadFile(path)
 	if err != nil {

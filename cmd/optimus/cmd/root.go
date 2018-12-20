@@ -61,7 +61,7 @@ func Execute() {
 	}
 }
 
-// Configuration
+//Read Configuration
 func NewConfig(path string) (*Config, error) {
 	content, err := ioutil.ReadFile(path)
 	if err != nil {
