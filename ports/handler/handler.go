@@ -3,20 +3,20 @@ package handler
 import (
 	"context"
 	"fmt"
+	"gopkg.in/bluesuncorp/validator.v5"
 	"net/http"
 
-	"bitbucket.org/nihanthd/optimus/log"
 	"github.com/DataDog/datadog-go/statsd"
+	"github.com/hashicorp/golang-lru"
 	"github.com/labstack/echo"
-	"github.com/patrickmn/go-cache"
+	"github.com/nihanthd/optimus/log"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
-	"gopkg.in/bluesuncorp/validator.v5"
 )
 
 type Handler struct {
 	log       *zap.Logger
-	cache     *cache.Cache
+	cache     *lru.Cache
 	statsd    *statsd.Client
 	validator *validator.Validate
 }
@@ -25,7 +25,7 @@ type HandlerParams struct {
 	fx.In
 
 	Log       *zap.Logger
-	Cache     *cache.Cache        `optional:"true"`
+	Cache     *lru.Cache          `optional:"true"`
 	Statsd    *statsd.Client      `optional:"true"`
 	Validator *validator.Validate `optional:"true"`
 }

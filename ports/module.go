@@ -1,7 +1,7 @@
 package ports
 
 import (
-	"bitbucket.org/nihanthd/optimus/ports/handler"
+	"github.com/nihanthd/optimus/ports/handler"
 	"go.uber.org/fx"
 )
 

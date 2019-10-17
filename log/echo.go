@@ -16,6 +16,10 @@ type echoLogger struct {
 	logger *zap.Logger
 }
 
+func (e *echoLogger) SetHeader(h string) {
+	panic("implement me")
+}
+
 func (e *echoLogger) Output() io.Writer {
 	return os.Stderr
 }

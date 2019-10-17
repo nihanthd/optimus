@@ -2,10 +2,10 @@ package exporter
 
 import (
 	"github.com/DataDog/datadog-go/statsd"
-	"github.com/go-resty/resty"
 	"github.com/nihanthd/optimus/collectors"
 	"github.com/prometheus/client_golang/prometheus"
 	"go.uber.org/zap"
+	"gopkg.in/resty.v1"
 )
 
 type Exporter struct {

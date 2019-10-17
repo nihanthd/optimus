@@ -7,8 +7,7 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo"
-
-	"github.com/stianeikeland/go-rpio"
+	rpio "github.com/stianeikeland/go-rpio"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 )

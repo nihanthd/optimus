@@ -1,10 +1,11 @@
-module bitbucket.org/nihanthd/optimus
+module github.com/nihanthd/optimus
 
 go 1.13
 
 require (
 	github.com/DataDog/datadog-go v2.3.0+incompatible
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
+	github.com/hashicorp/golang-lru v0.5.3
 	github.com/labstack/echo v3.3.10+incompatible
 	github.com/labstack/gommon v0.3.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
@@ -21,5 +22,6 @@ require (
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550 // indirect
 	gopkg.in/bluesuncorp/validator.v5 v5.10.3
+	gopkg.in/resty.v1 v1.12.0
 	gopkg.in/yaml.v2 v2.2.2
 )

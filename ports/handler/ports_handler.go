@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"bitbucket.org/nihanthd/optimus/pi"
 	"github.com/labstack/echo"
+	"github.com/nihanthd/optimus/pi"
 )
 
 type PortsHandler struct {

@@ -3,6 +3,7 @@ package cmd
 import (
 	"context"
 	"fmt"
+	"gopkg.in/resty.v1"
 	"io/ioutil"
 	"math/rand"
 	"net"
@@ -19,7 +20,6 @@ import (
 	"github.com/nihanthd/optimus/exporter"
 
 	"github.com/DataDog/datadog-go/statsd"
-	"github.com/go-resty/resty"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"

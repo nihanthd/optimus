@@ -1,9 +1,9 @@
 package collectors
 
 import (
-	"github.com/go-resty/resty"
 	"github.com/prometheus/client_golang/prometheus"
 	"go.uber.org/zap"
+	"gopkg.in/resty.v1"
 )
 
 const (
