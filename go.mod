@@ -14,6 +14,7 @@ require (
 	github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4
 	github.com/spf13/cobra v0.0.5
 	github.com/stianeikeland/go-rpio v4.2.0+incompatible
+	github.com/stretchr/testify v1.4.0
 	go.uber.org/atomic v1.4.0 // indirect
 	go.uber.org/dig v1.7.0 // indirect
 	go.uber.org/fx v1.9.0
@@ -23,5 +24,5 @@ require (
 	golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550 // indirect
 	gopkg.in/bluesuncorp/validator.v5 v5.10.3
 	gopkg.in/resty.v1 v1.12.0
-	gopkg.in/yaml.v2 v2.2.2
+	gopkg.in/yaml.v2 v2.2.8
 )
